@@ -23,3 +23,9 @@ require('nvim-treesitter.configs').setup {
   indent = { enable = true },
 }
 
+require('lualine').setup {
+	options = {
+		theme = 'catppuccin',
+		extensions = {'nvim-tree'}
+	}
+}
