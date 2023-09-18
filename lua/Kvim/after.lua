@@ -1,7 +1,7 @@
 -- Telescope
 local telescope = require('telescope.builtin')
-vim.keymap.set('n', '<leader>sf', telescope.find_files, {desc = "Search File"})
-vim.keymap.set('n', '<leader>sn', telescope.find_files, {desc = "Search Navigate (File)"})
+vim.keymap.set('n', '<leader>sf', function()telescope.find_files({hidden=true, no_ignore=true}) end, {desc = "Search File (With hidden)"})
+vim.keymap.set('n', '<leader>sn', function()telescope.find_files({no_ignore=true}) end, {desc = "Search Navigate (File)"})
 vim.keymap.set('n', '<leader>sg', telescope.git_files, {desc = "Search GitFiles"})
 vim.keymap.set('n', '<leader>st', telescope.live_grep, {desc = "Search Text"})
 
