@@ -26,6 +26,6 @@ require('nvim-treesitter.configs').setup {
 require('lualine').setup {
 	options = {
 		theme = 'catppuccin',
-		extensions = {'nvim-tree'}
-	}
+	},
+	extensions = {'nvim-tree'}
 }
