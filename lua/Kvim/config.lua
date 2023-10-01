@@ -1,5 +1,9 @@
 -- LSP
-local lsp = require('lsp-zero').preset({})
+local lsp = require('lsp-zero').preset({
+	manage_nvim_cmp = {
+		set_sources = 'recommended',
+	},
+})
 
 lsp.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings

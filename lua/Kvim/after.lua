@@ -24,3 +24,7 @@ vim.keymap.set('n', "<leader>tn", '<Cmd>BufferNext<CR>', {desc = "Tab Next"})
 vim.keymap.set('n', "<leader>tp", '<Cmd>BufferPrevious<CR>', {desc = "Tab Previous"})
 vim.keymap.set('n', "<leader>x", '<Cmd>BufferClose<CR>', {desc = "Close Buffer"})
 vim.keymap.set('n', "<leader>ts", '<Cmd>BufferPick<CR>', {desc = "Jump to Buffer"})
+
+-- gd and gD
+vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true, desc = "Goto Definition" })
+vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true, desc = "Goto Declaration" })
